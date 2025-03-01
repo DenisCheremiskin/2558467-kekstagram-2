@@ -81,7 +81,6 @@ const getComments = (photoIndex) => {
 
 // Делаем профили
 
-const profilesArray = [];
 
 const getProfile = (index) => {
   const comments = getComments(index);
@@ -94,8 +93,15 @@ const getProfile = (index) => {
   };
 };
 
-for (let i = 1; i <= TOTAL_PROFILES; i++) {
-  profilesArray.push(getProfile(i));
-}
+const getProfilesArray = () => {
+  const profilesArray = [];
 
-export { profilesArray };
+  for (let i = 1; i <= TOTAL_PROFILES; i++) {
+    profilesArray.push(getProfile(i));
+  }
+
+  return profilesArray;
+};
+
+
+export { getProfilesArray };

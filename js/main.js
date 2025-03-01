@@ -1,5 +1,5 @@
-import { profilesArray } from './data.js';
+import { getProfilesArray } from './data.js';
 
-const arrayProfiles = profilesArray;
+const arrayProfiles = getProfilesArray();
 
 console.log(arrayProfiles);
