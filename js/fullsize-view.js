@@ -22,15 +22,19 @@ const createCommentElement = ({ avatar, message, name }) => {
 
   commentElement.innerHTML = `
     <img class="social__picture"
-    src="${avatar}"
-    alt="${name}"
     width="35"
     height="35">
-    
+
     <p class="social__text">
-    ${message}
     </p>
   `;
+
+  const imgElement = commentElement.querySelector('.social__picture');
+  imgElement.src = avatar;
+  imgElement.alt = name;
+
+  const textElement = commentElement.querySelector('.social__text');
+  textElement.textContent = message;
 
   return commentElement;
 };

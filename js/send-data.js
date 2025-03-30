@@ -1,15 +1,14 @@
 import { postData } from './api.js';
 import { resetForm } from './upload-form.js';
 
-// Блокирует кнопку во вркмя отправки
-
-const formSubmitButtonElement = document.querySelector('.img-upload__submit');
-const bodyElement = document.body;
-
 const SubmitButtonText = {
   IDLE: 'Опубликовать',
   SENDING: 'Сохраняю...',
 };
+
+// Блокирует кнопку во вркмя отправки
+const formSubmitButtonElement = document.querySelector('.img-upload__submit');
+const bodyElement = document.body;
 
 const toggleSubmitButton = (text, isDisabled) => {
   formSubmitButtonElement.disabled = isDisabled;
